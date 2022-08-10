@@ -1,2 +1,3 @@
-# Youtube-Scrapper
-With this application you can search and download videos through Python.
+# Youtube-Downloader
+With this application you can download MP3 and MP4 files from Youtube through Python.  
+Just paste the link from the Youtube video you want and see the magic happen.

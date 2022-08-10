@@ -27,7 +27,7 @@ def clicked_video():
         lbl_length_value = Label(window, text=length, font=("Arial Bold", 10))
         lbl_length_value.grid(row=6,column=1,  pady=2)
 
-        lbl_description = Label(window, text="Description : ", font=("Arial Bold", 10))
+        """lbl_description = Label(window, text="Description : ", font=("Arial Bold", 10))
         lbl_description.grid(row=7,column=0,  pady=2)
 
         lbl_description_value = Label(window, text=description, font=("Arial Bold", 10))
@@ -40,7 +40,7 @@ def clicked_video():
         lbl_rating_value.grid(row=8,column=1,  pady=2)
 
         lbl_status = Label(window, text=status, font=("Arial Bold", 15))
-        lbl_status.grid(row=9,column=1,  pady=2)
+        lbl_status.grid(row=9,column=1,  pady=2)"""
     except Exception as e:
         messagebox.showinfo('Oops!. Problem.', 'URL not found or something else..')
     
@@ -59,7 +59,7 @@ window = Tk()
 window.title("Youtube Video Downloader")
 
 
-image = PhotoImage(file=r"C:\Users\Administrator\Desktop\Youtube Scrapper\youtube_image.png")
+image = PhotoImage(file=r"youtube_image.png")
 label = Label(image=image)
 label.grid(row = 0, column = 0,  pady = 2)
 
@@ -82,6 +82,6 @@ btn_mp3.grid(row=2, column=1, sticky=W)
 
 
 
-window.geometry('550x300')
+window.geometry('700x400')
 
 window.mainloop()

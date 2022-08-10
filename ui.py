@@ -46,7 +46,7 @@ def clicked_video():
     
 def clicked_mp3():
     try:
-        print(url.get())
+        # print(url.get())
         download_mp3(url.get())
     except Exception as e:
         messagebox.showinfo('Oops!. Problem.', 'URL not found or something else..')

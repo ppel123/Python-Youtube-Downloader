@@ -19,13 +19,13 @@ def download_mp3(link):
     yt = YouTube(link)
 
     stream = yt.streams.get_highest_resolution()
-    print("before try")
+    # print("before try")
     try:
         stream.download()
         mp4_file = (str(Path(__file__).resolve().parent) + "\\" + str(yt.title) + ".mp4")
-        print(mp4_file)
+        # print(mp4_file)
         mp3_file = (str(Path(__file__).resolve().parent) + "\\" + str(yt.title) + ".mp3")
-        print(mp3_file)
+        # print(mp3_file)
         videoclip = VideoFileClip(mp4_file)
         audioclip = videoclip.audio
         audioclip.write_audiofile(mp3_file)

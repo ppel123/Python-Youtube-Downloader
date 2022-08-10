@@ -21,13 +21,13 @@ def clicked_video():
         lbl_views_value = Label(window, text=views, font=("Arial Bold", 10))
         lbl_views_value.grid(row=5,column=1,  pady=2)
 
-        lbl_length = Label(window, text="Length : ", font=("Arial Bold", 10))
+        """lbl_length = Label(window, text="Length : ", font=("Arial Bold", 10))
         lbl_length.grid(row=6,column=0,  pady=2)
 
         lbl_length_value = Label(window, text=length, font=("Arial Bold", 10))
         lbl_length_value.grid(row=6,column=1,  pady=2)
 
-        """lbl_description = Label(window, text="Description : ", font=("Arial Bold", 10))
+        lbl_description = Label(window, text="Description : ", font=("Arial Bold", 10))
         lbl_description.grid(row=7,column=0,  pady=2)
 
         lbl_description_value = Label(window, text=description, font=("Arial Bold", 10))
@@ -82,6 +82,6 @@ btn_mp3.grid(row=2, column=1, sticky=W)
 
 
 
-window.geometry('700x400')
+window.geometry('900x400')
 
 window.mainloop()

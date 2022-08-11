@@ -15,17 +15,22 @@ def download_video(link):
         return ("","","","","","Download failed")
 
 def download_mp3(link):
-    print("in download mp3")
+    # print("in download mp3")
     yt = YouTube(link)
 
     stream = yt.streams.get_highest_resolution()
     # print("before try")
     try:
         stream.download()
-        mp4_file = (str(Path(__file__).resolve().parent) + "\\" + str(yt.title) + ".mp4")
-        # print(mp4_file)
-        mp3_file = (str(Path(__file__).resolve().parent) + "\\" + str(yt.title) + ".mp3")
-        # print(mp3_file)
+        original_title = yt.title
+        print("Original title " + original_title)
+        specialChars = "/\:*?|'" 
+        for specialChar in specialChars:
+            original_title = original_title.replace(specialChar, '')
+        mp4_file = (str(Path(__file__).resolve().parent) + "\\" + str(original_title) + ".mp4")
+        print("mp4_file "+mp4_file)
+        mp3_file = (str(Path(__file__).resolve().parent) + "\\" + str(original_title) + ".mp3")
+        print(mp3_file)
         videoclip = VideoFileClip(mp4_file)
         audioclip = videoclip.audio
         audioclip.write_audiofile(mp3_file)
